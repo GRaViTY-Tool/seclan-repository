@@ -251,32 +251,3 @@ document.addEventListener("DOMContentLoaded", function(e) {
         history.replaceState(contentDiv.scrollTop, document.title);
     }
 });
-      }
-    }
-}
-
-var updateSearchResults = function() {};
-
-function indexFilesLoaded() {
-    return moduleSearchIndex
-        && packageSearchIndex
-        && typeSearchIndex
-        && memberSearchIndex
-        && tagSearchIndex;
-}
-// Copy the contents of the local snippet to the clipboard
-function copySnippet(button) {
-    copyToClipboard(button.nextElementSibling.innerText);
-    switchCopyLabel(button, button.firstElementChild);
-}
-function copyToClipboard(content) {
-    var textarea = document.createElement("textarea");
-    textarea.style.height = 0;
-    document.body.appendChild(textarea);
-    textarea.value = content;
-    textarea.select();
-    document.execCommand("copy");
-    document.body.removeChild(textarea);
-}
-function switchCopyLabel(button, span) {
-    var copied = span.getAttribut
